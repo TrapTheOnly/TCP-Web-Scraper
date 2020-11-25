@@ -2,6 +2,10 @@
 
 TCP web scraping client-server Python based application
 
+## Overall View
+
+![Screeenshot](screenshot.png "Screenshot of Terminals")
+
 ## Table Of Contents
 
 1. [About](https://github.com/TrapTheOnly/Test_Service#about-app)
