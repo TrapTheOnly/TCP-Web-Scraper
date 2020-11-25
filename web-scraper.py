@@ -33,6 +33,7 @@ class Server:
                     colored(f"TERMINAL KILLED!", 'red'))
                 sock.shutdown(socket.SHUT_RDWR)
                 sock.close()
+                break
 
     def handler(self, sc, addr):
         try:
