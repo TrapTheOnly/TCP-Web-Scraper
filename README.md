@@ -28,7 +28,7 @@ or
 <p></p>
 ```
 
-but not
+But Not
 
 ```HTML
 <p>
