@@ -23,9 +23,16 @@ class Server:
             f"{colored('[SERVER]', 'green')} {colored('has started on ', 'yellow')}" +
             f"{colored(str(HOST) + ':' + str(PORT), 'blue')}")
         while True:
-            sc, addr = sock.accept()
-            thread = threading.Thread(target=self.handler, args=(sc, addr,))
-            thread.start()
+            try:
+                sc, addr = sock.accept()
+                thread = threading.Thread(
+                    target=self.handler, args=(sc, addr,))
+                thread.start()
+            except KeyboardInterrupt:
+                print(
+                    colored(f"TERMINAL KILLED!", 'red'))
+                sock.shutdown(socket.SHUT_RDWR)
+                sock.close()
 
     def handler(self, sc, addr):
         try:
